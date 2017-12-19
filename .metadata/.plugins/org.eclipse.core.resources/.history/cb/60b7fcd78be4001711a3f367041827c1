@@ -1,0 +1,19 @@
+package chapter8;
+
+public class Cleric {
+	String name;
+	int hp;
+	final int maxHp = 50;
+	int mp;
+	final int maxMp = 10;
+
+	public void selfAid(){
+		if(this.mp >= 5){
+			System.out.println(name + "は、セルフエイドを唱えた!");
+			this.mp -= 5;
+			int h = Math.max((maxHp - hp), 5);
+			this.hp += h;
+			System.out.println(name + "は、ＨＰが" + h + "回復した!");
+		}else{System.out.println("MPが足りない。");}
+	}
+}
