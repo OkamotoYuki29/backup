@@ -7,6 +7,12 @@ public class Main {
 		c.hp = 20;
 		c.mp = 5;
 		c.selfAid();
+		c.selfAid();
+		c.selfAid();
+		c.selfAid();
+		c.selfAid();
+		c.selfAid();
+		c.selfAid();
 		c.pray(3);
 	}
 }
