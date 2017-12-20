@@ -1,0 +1,15 @@
+package Free;
+
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Empty e = new Empty();
+		String s = e.toString();
+		System.out.println(s);
+		Date d = new Date();
+		System.out.println(d.toString());
+	}
+
+}

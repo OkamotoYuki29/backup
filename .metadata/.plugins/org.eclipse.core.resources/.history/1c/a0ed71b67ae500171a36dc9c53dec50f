@@ -1,0 +1,13 @@
+package chapter14;
+import java.util.Calendar;
+import java.util.Date;
+public class Main {
+	public static void main(String[] args) {
+		//現在の年を表示する
+		Date now = new Date();
+		Calendar c = Calendar.getInstance();
+		c.setTime(now);
+		System.out.println(now);
+	}
+
+}
