@@ -1,0 +1,8 @@
+package chapter12;
+
+public abstract class Asset {
+	private int price;
+	public Asset(int price){
+		this.price = price;
+	}
+}

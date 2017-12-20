@@ -1,0 +1,10 @@
+package chapter12;
+
+public class Computer {
+	private String name;
+	private int price;
+	private String color;
+	private String makerName;
+	//コンストラクタ
+	public Co
+}
