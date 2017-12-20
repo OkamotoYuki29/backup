@@ -1,0 +1,6 @@
+package chapter11;
+
+public class Main {
+	PoisonMatango pm = new PoisonMatango('A');
+
+}
