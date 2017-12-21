@@ -1,17 +1,12 @@
-package chapter8;
+package chapter9;
 
 public class Cleric {
 	//field
 	String name;
 	int hp;
-	final int maxHp;
+	static final int maxHp = 50;
 	int mp;
-	final int maxMp;
-	//コンストラクタ
-	Cleric(){
-		this.maxHp = 50;
-		this.maxMp = 10;
-	}
+	static final int maxMp = 10;
 	//セルフエイド
 	public void selfAid(){
 		if(this.mp < 5){
@@ -32,6 +27,18 @@ public class Cleric {
 		this.mp += recover;
 		System.out.println("MPが" + recover + "回復した!");
 		return recover;
+	}
+	//コンストラクタ
+	Cleric(String name, int hp, int mp){
+		this.name = name;
+		this.hp = hp;
+		this.mp = mp;
+	}
+	Cleric(String name, int hp){
+		this(name,hp,Cleric.maxMp);
+	}
+	Cleric(String name){
+		this(name,Cleric.maxHp);
 	}
 
 }

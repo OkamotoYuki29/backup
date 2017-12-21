@@ -16,10 +16,10 @@ public class Cleric {
 	public void selfAid(){
 		if(this.mp < 5){
 			System.out.println("MPが不足しています");
-		}else{
+		}
 		System.out.println(this.name + "はセルフエイドを唱えた!");
 		this.mp -=5;
-		this.hp = this.maxHp;}
+		this.hp = this.maxHp;
 	}
 	//祈る
 	public int pray(int sec){
