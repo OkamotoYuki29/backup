@@ -10,9 +10,5 @@ public class Hero {
 	public void setMp(int mp){this.mp = mp;}
 	public String getName(){return this.name;}
 	public void setName(String name){this.name = name;}
-	public Hero(){
-		setHp(100);
-		setMp(20);
-	}
 }
 

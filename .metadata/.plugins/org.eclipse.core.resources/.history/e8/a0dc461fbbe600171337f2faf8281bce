@@ -1,0 +1,16 @@
+package free;
+
+public class Sample1_4 {
+	public static void main(String[] args){
+		System.out.println(255);
+		System.out.println(0b1_1111_111);
+		System.out.println(0377);
+		System.out.println(0xff);
+		System.out.println(12.33);
+		System.out.println(3e4);
+		System.out.println('A');
+		System.out.println('\u30AA');
+		System.out.println("Hello");
+		System.out.println(true);
+	}
+}
