@@ -1,0 +1,14 @@
+package question;
+
+public class Test3_14 {
+	public static void main(String[] args) {
+		String str1 = "existence";
+		str1.replace("e", "*");    //*だけ
+		System.out.println(str1);
+
+		String str2 = "existence";
+		str2.replace("e","\"");
+		System.out.println(str2);
+		System.out.println(str1);
+	}
+}

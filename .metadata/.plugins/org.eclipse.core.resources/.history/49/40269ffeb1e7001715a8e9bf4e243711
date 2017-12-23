@@ -1,0 +1,9 @@
+package question;
+
+public class Test3_17 {
+	public static void main(String[] args) {
+		String str = "12345";
+		str += 6789;
+		System.out.println(str);
+	}
+}
