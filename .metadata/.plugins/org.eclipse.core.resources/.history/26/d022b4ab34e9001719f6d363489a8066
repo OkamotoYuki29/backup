@@ -1,0 +1,21 @@
+package free;
+
+class Super{
+	public Super(){System.out.println("Super()");}
+	public Super(int a){System.out.println("Super(int a)");}
+}
+class Sub extends Super{
+	public Sub(){
+		int a = 2;
+		super(int a);
+		System.out.println("Sub");}
+	public Sub(int a){
+		super(a);
+		System.out.println("Sub(int a)");}
+}
+class Main{
+	public static void main(String[] args){
+		Sub s1 = new Sub();
+		Sub s2 = new Sub(10);
+	}
+}

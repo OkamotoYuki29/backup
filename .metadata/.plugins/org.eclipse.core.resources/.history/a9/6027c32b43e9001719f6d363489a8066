@@ -1,0 +1,10 @@
+package free;
+
+public class Main{
+	public static void main(String[] args){
+		int a = 128;
+		int b = -128;
+		if(a instanceof Byte){byte c = (byte) a;}
+
+	}
+}
