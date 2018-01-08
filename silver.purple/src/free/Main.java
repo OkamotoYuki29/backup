@@ -1,28 +1,16 @@
 package free;
 
 public class Main{
-<<<<<<< HEAD
-	public static void main(String[] args){
-		int i1 = 100;
-		Integer obj = i1;
-		obj = 200;
-		System.out.println(obj);
-		System.out.println(i1);
-=======
 	public static void main(String[] args) {
-		int[] ary = {1,2,3,4,5};
-		int i = 1;
-		while(i < ary.length) {
-			i++;
-			if(i == 2) {
-				continue;
-			}
-			System.out.println(i + " ");
-			if(i > 3) {
-				break;
-			}
+		StringBuilder s = new StringBuilder();
+		for(int i = 1; i <= 100; i++) {
+			s.append(i).append(",");
 		}
->>>>>>> 6dab56d780063b7e8a16f6ecc3127ad22774c52c
+		System.out.println(s);
+		String s1 = s.toString();
+		String[] a = s1.split("[,]");
+		for(String c : a) {
+			System.out.println(c);
+		}
 	}
 }
-
