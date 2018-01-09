@@ -1,0 +1,8 @@
+package free;
+
+public class Main{
+	char c = 'a';
+	int i = c;
+	System.out.println(i);
+}
+

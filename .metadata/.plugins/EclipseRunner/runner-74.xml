@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+<category name="カテゴリーなし">
+<launchConfiguration bookmark="false" name="Capsule"/>
+<launchConfiguration bookmark="false" name="CheckLoadJDBC"/>
+<launchConfiguration bookmark="false" name="CheckLoadJDBC (1)"/>
+<launchConfiguration bookmark="false" name="Hello"/>
+<launchConfiguration bookmark="false" name="HelloServlet"/>
+<launchConfiguration bookmark="false" name="Main"/>
+<launchConfiguration bookmark="false" name="Main (1)"/>
+<launchConfiguration bookmark="false" name="Main (10)"/>
+<launchConfiguration bookmark="false" name="Main (11)"/>
+<launchConfiguration bookmark="false" name="Main (12)"/>
+<launchConfiguration bookmark="false" name="Main (13)"/>
+<launchConfiguration bookmark="false" name="Main (2)"/>
+<launchConfiguration bookmark="false" name="Main (3)"/>
+<launchConfiguration bookmark="false" name="Main (4)"/>
+<launchConfiguration bookmark="false" name="Main (5)"/>
+<launchConfiguration bookmark="false" name="Main (6)"/>
+<launchConfiguration bookmark="false" name="Main (7)"/>
+<launchConfiguration bookmark="false" name="Main (8)"/>
+<launchConfiguration bookmark="false" name="Main (9)"/>
+<launchConfiguration bookmark="false" name="Sample1_4"/>
+<launchConfiguration bookmark="false" name="Sample6_10"/>
+<launchConfiguration bookmark="false" name="Test"/>
+<launchConfiguration bookmark="false" name="Test (1)"/>
+<launchConfiguration bookmark="false" name="Test (2)"/>
+<launchConfiguration bookmark="false" name="Test3_14"/>
+<launchConfiguration bookmark="false" name="Test3_17"/>
+<launchConfiguration bookmark="false" name="ローカル・ホスト の Tomcat8 (Java8)"/>
+<launchConfiguration bookmark="false" name="新規構成"/>
+<launchConfiguration bookmark="false" name="新規構成 (1)"/>
+<launchConfiguration bookmark="false" name="新規構成 (2)"/>
+</category>
+</runner>
