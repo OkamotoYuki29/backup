@@ -13,6 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/pleiades-4.7.1-java-win-64bit-jre_20171019/pleiades/tomcat/8/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/internousdev/Desktop/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
