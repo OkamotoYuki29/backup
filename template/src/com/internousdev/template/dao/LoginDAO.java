@@ -12,6 +12,15 @@ public class LoginDAO {
 	private LoginDTO loginDTO = new LoginDTO();
 
 	public LoginDTO getLoginserInfo(String loginUserId,String loginPassword){
-		String sql = "SELECT * FROM"
+		String sql = "SELECT * FROM login_user_transaction where login_id = ? AND login_pass = ?";
+
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+			preparedStatement.setString(1, loginUserId);
+			preparedStatement.setString(2, loginPassword);
+
+
+		}
 	}
 }
