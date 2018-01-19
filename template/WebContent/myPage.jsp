@@ -98,7 +98,7 @@
 				<div>
 					<br>
 					<span>前画面に戻る場合は</span>
-					<a href='<s:url action="HomeAction"/>'>ログアウト</a>
+					<a href='<s:url action="LogoutAction"/>'>ログアウト</a>
 					<span>をお願いします</span>
 				</div>
 		</div>
