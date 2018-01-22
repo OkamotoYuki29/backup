@@ -27,6 +27,15 @@
 
 			</action>
 
+		<!-- AdministratorHomeAction -->
+			<action name="AdministratorHomeAction"
+					class="com.internousdev.ecsite.action.AdministratorHomeAction"
+					method="execute">
+
+				<result name="success">administratorLogin.jsp</result>
+
+			</action>
+
 		<!-- LoginAction -->
 			<action name="LoginAction"
 					class="com.internousdev.ecsite.action.LoginAction"

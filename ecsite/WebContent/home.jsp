@@ -53,6 +53,11 @@
 		display:inline-block;
 		text-align:center;
 	}
+	#bottom{
+		position:absolute;
+		bottom:0%;
+		text-align:center;
+	}
 </style>
 </head>
 <body>
@@ -72,6 +77,8 @@
 				<p>ログアウトする場合は
 					<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
 			</s:if>
+			<p id="bottom">管理者は
+				<a href='<s:url action="AdministatorHomeAction"/>'>こちら</a></p>
 		</div>
 	</div>
 	<div id="footer">

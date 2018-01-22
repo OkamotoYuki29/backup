@@ -33,17 +33,40 @@ create table user_buy_item_transaction(
 	id int not null primary key auto_increment,
 	item_transaction_id int,
 	total_price int,
-	total_conunt int,
+	total_count int,
 	user_master_id varchar(16),
 	pay varchar(30),
 	insert_date datetime,
 	delete_date datetime
 );
 
+drop table if exists login_administrator_transaction;
+
+create table login_administrator_transaction(
+	id int not null primary key auto_increment,
+	login_id varchar(16) unique,
+	login_pass varchar(16),
+	administrator_name varchar(50),
+	permission_level int check(permission_level>0 and permission_level<=5),
+	insert_date datetime,
+	updated_date datetime
+);
+
+drop table if exists permission_level;
+
+create table permission_level(
+	level int not null check(level>0 and level<=5),
+	permission varchar(50)
+);
+
 INSERT INTO
 	item_info_transaction(item_name,item_price,item_stock)
-	VALUES("のーとBook",100,50);
+	VALUES("ノートBook",100,50);
 
 INSERT INTO
 	login_user_transaction(login_id,login_pass,user_name)
 	VALUES("internous","internous01","test");
+
+INSERT INTO
+	login_administrator_transaction(login_id,login_pass,administrator_name,permission_level)
+	VALUES("internousdev","internousdev","インターノウス株式会社",5);

@@ -16,7 +16,25 @@ public class MyPageDAO {
 			String item_transaction_id,String user_master_id)throws SQLException{
 
 		ArrayList<MyPageDTO> myPageDTO = new ArrayList<MyPageDTO>();
-		String sql = "SELECT ubit.id,iit.item_name,ubit.total_price,ubit.total_count,ubit.pay,ubit.insert_date FROM user buy_item_transaction ubit LEFT JOIN item_info_transaction iit ON ubit.item_transaction_id = iit.id WHERE ubit.item_transaction_id = ? AND ubit.user_master_id = ? ORDER BY insert_date DESC";
+		String sql = "SELECT "
+						+ "ubit.id,"
+						+ "iit.item_name,"
+						+ "ubit.total_price,"
+						+ "ubit.total_count,"
+						+ "ubit.pay,"
+						+ "ubit.insert_date"
+					+ " FROM "
+						+ "user_buy_item_transaction ubit"
+					+ " LEFT JOIN "
+						+ "item_info_transaction iit"
+					+ " ON "
+						+ "ubit.item_transaction_id = iit.id"
+					+ " WHERE "
+						+ "ubit.item_transaction_id = ?"
+						+ " AND "
+						+ "ubit.user_master_id = ?"
+					+ " ORDER BY "
+						+ "insert_date DESC";
 		/* 表示する表の列は「履歴情報のid(not null primary key auto_increment)」
 		 *                  「商品情報の商品名」
 		 *                  「履歴情報の合計金額」
