@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri ="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +10,10 @@
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="description" content="">
 <meta name="keywords" content=""/>
-<title>Home画面</title>
+<title>ユーザー管理画面</title>
 
 <style type="text/css">
+	/* ========TAG LAYOUT======== */
 	body{
 		margin:0;
 		padding:0;
@@ -27,7 +28,7 @@
 		text-align:center;
 		margin:0 auto;
 	}
-	/* ========ecsite LAYOUT========*/
+	/* ========ID LAYOUT========*/
 	#top{
 		width:780px;
 		margin:30px auto;
@@ -49,14 +50,13 @@
 		background-color: black;
 		clear:both;
 	}
-	#text-center{
+	#text-link{
 		display:inline-block;
-		text-align:center;
+		text-align:right;
 	}
-	#bottom{
-		position:absolute;
-		bottom:0%;
-		text-align:center;
+	#content{
+		font-size:6px;
+		line-height:0px;
 	}
 </style>
 </head>
@@ -67,22 +67,9 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Home</p>
+			<p>ユーザー管理画面</p>
 		</div>
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入"/>
-			</s:form>
-			<s:if test="#session.id != null">
-				<p>ログアウトする場合は
-					<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
-			</s:if>
-			<p id="bottom">管理者は
-				<a href='<s:url action="ManagerHomeAction"/>'>こちら</a></p>
-		</div>
-	</div>
-	<div id="footer">
-		<div id="pr">
+		<div>
 		</div>
 	</div>
 </body>

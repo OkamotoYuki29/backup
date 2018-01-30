@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri ="/struts-tags" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +10,10 @@
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="description" content="">
 <meta name="keywords" content=""/>
-<title>Home画面</title>
+<title>ERROR画面</title>
 
 <style type="text/css">
+	/* ========TAG LAYOUT======== */
 	body{
 		margin:0;
 		padding:0;
@@ -27,7 +28,7 @@
 		text-align:center;
 		margin:0 auto;
 	}
-	/* ========ecsite LAYOUT========*/
+	/* ========ID LAYOUT========*/
 	#top{
 		width:780px;
 		margin:30px auto;
@@ -49,15 +50,6 @@
 		background-color: black;
 		clear:both;
 	}
-	#text-center{
-		display:inline-block;
-		text-align:center;
-	}
-	#bottom{
-		position:absolute;
-		bottom:0%;
-		text-align:center;
-	}
 </style>
 </head>
 <body>
@@ -67,18 +59,12 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Home</p>
+			<p>ERROR!!</p>
 		</div>
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入"/>
-			</s:form>
-			<s:if test="#session.id != null">
-				<p>ログアウトする場合は
-					<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
-			</s:if>
-			<p id="bottom">管理者は
-				<a href='<s:url action="ManagerHomeAction"/>'>こちら</a></p>
+		<div>
+			<h1>エラーが発生しました。</h1>
+				<p>権限がないため表示ができません。</p>
+				<p>ブラウザで戻るか<a href='<s:url action="ManagerHomeAction" />'>ログイン</a>からやり直してください。</p>
 		</div>
 	</div>
 	<div id="footer">

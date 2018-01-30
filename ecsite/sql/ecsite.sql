@@ -40,14 +40,14 @@ create table user_buy_item_transaction(
 	delete_date datetime
 );
 
-drop table if exists login_administrator_transaction;
+drop table if exists login_manager_transaction;
 
-create table login_administrator_transaction(
+create table login_manager_transaction(
 	id int not null primary key auto_increment,
 	login_id varchar(16) unique,
 	login_pass varchar(16),
-	administrator_name varchar(50),
-	permission_level int check(permission_level>0 and permission_level<=5),
+	manager_name varchar(50),
+	permission_level int not null check(level>0 and level<=5),
 	insert_date datetime,
 	updated_date datetime
 );
@@ -55,8 +55,8 @@ create table login_administrator_transaction(
 drop table if exists permission_level;
 
 create table permission_level(
-	level int not null check(level>0 and level<=5),
-	permission varchar(50)
+	access_target varchar(50),
+	level int not null check(level>0 and level<=5)
 );
 
 INSERT INTO
@@ -68,5 +68,9 @@ INSERT INTO
 	VALUES("internous","internous01","test");
 
 INSERT INTO
-	login_administrator_transaction(login_id,login_pass,administrator_name,permission_level)
+	login_manager_transaction(login_id,login_pass,manager_name,permission_level)
 	VALUES("internousdev","internousdev","インターノウス株式会社",5);
+
+INSERT INTO
+	permission_level
+	VALUES("商品管理",1),("ユーザー管理",2),("管理者管理",5),("データ管理",3);

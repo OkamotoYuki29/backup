@@ -10,7 +10,7 @@
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="description" content="">
 <meta name="keywords" content=""/>
-<title>管理者Login画面</title>
+<title>商品管理画面</title>
 
 <style type="text/css">
 	/* ========TAG LAYOUT======== */
@@ -54,6 +54,10 @@
 		display:inline-block;
 		text-align:right;
 	}
+	#content{
+		font-size:6px;
+		line-height:0px;
+	}
 </style>
 </head>
 <body>
@@ -63,19 +67,9 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>管理者Login</p>
+			<p>商品管理画面</p>
 		</div>
 		<div>
-			<s:form action="AdministratorLoginAction">
-				<s:textfield name="loginAdministratorId" label="ユーザーID"/>
-				<s:password name="loginAdministratorPassword" label="パスワード"/>
-				<s:submit value="ログイン"/>
-			</s:form>
-			<br>
-			<div id="text-link">
-				<p>Homeへ戻る場合は
-					<a href='<s:url action="GoHomeAction"/>'>こちら</a>
-			</div>
 		</div>
 	</div>
 </body>
