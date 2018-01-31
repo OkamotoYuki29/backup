@@ -1,6 +1,8 @@
 package com.internousdev.ecsite.action;
 
 import java.util.Map;
+import java.util.ArrayList;
+import java.sql.SQLException;
 import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.ecsite.dao.ManagerLoginDAO;
 import com.internousdev.ecsite.dto.ManagerLoginDTO;
@@ -15,9 +17,9 @@ public class ManagerLoginAction extends ActionSupport implements SessionAware{
 	private ManagerLoginDAO managerLoginDAO = new ManagerLoginDAO();
 	private ManagerLoginDTO managerLoginDTO = new ManagerLoginDTO();
 	private PermissionDAO permissionDAO = new PermissionDAO();
-	private PermissionDTO permissionDTO = new PermissionDTO();
+	private ArrayList<PermissionDTO> permissionList = new ArrayList<>();
 
-	public String execute(){
+	public String execute() throws SQLException{
 		String result = ERROR; //再度管理者	ログイン画面へ
 		managerLoginDTO = managerLoginDAO.getLoginManagerInfo(loginManagerId,loginManagerPassword);
 		session.put("loginManager",managerLoginDTO);
@@ -30,8 +32,9 @@ public class ManagerLoginAction extends ActionSupport implements SessionAware{
 			session.put("login_Manager_name",managerLoginDTO.getManagername());
 			session.put("login_Manager_permission_level",managerLoginDTO.getPermissionLevel());
 
-			//管理権限テーブルを取得
-			permissionDTO = permissionDAO.getLoginManagerInfo();
+			//管理権限レベルを取得
+			permissionList = permissionDAO.getPermissionLevel();
+			session.put("permission_list",permissionList);
 
 			return result;
 		}

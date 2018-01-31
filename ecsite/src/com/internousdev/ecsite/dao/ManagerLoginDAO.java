@@ -28,7 +28,7 @@ public class ManagerLoginDAO {
 				managerLoginDTO.setLoginManagerId(resultSet.getString("login_id"));
 				managerLoginDTO.setLoginManagerPassword(resultSet.getString("login_pass"));
 				managerLoginDTO.setManagername(resultSet.getString("Manager_name"));
-				managerLoginDTO.setPermissionLevel(resultSet.getInt("permission_name"));
+				managerLoginDTO.setPermissionLevel(resultSet.getInt("permission_level"));
 
 				if(!(resultSet.getString("login_id").equals(null))){
 					managerLoginDTO.setLoginFlg(true);

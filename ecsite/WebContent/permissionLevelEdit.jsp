@@ -10,7 +10,7 @@
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="description" content="">
 <meta name="keywords" content=""/>
-<title>管理者Home画面</title>
+<title>管理者権限変更画面</title>
 
 <style type="text/css">
 	/* ========TAG LAYOUT======== */
@@ -67,36 +67,22 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>管理者Home画面</p>
+			<p>管理者権限変更画面</p>
 		</div>
-		${levelDto.ItemManagement }
 		<div>
-			<s:if test="#session.login_Manager_permission_level >= levelDto.ItemManagement" >
-			<div>
-				<p id="text-link"><a href='<s:url action="ItemManagement"/>'>商品管理</a></p>
-				<p id="content">商品追加・変更・削除・出力など
-			</div>
-			</s:if>
-			<s:if test="#session.login_Manager_permission_level >= 2" >
-			<div>
-				<p id="text-link"><a href='<s:url action="UserManagement"/>'>ユーザー管理</a></p>
-				<p id="content">ユーザー情報の閲覧・出力、ユーザーログイン情報の閲覧・出力など</p>
-			</div>
-			</s:if>
-			<s:if test="#session.login_Manager_permission_level >= 5" >
-			<div>
-				<p id="text-link"><a href='<s:url action="ManagerManagement"/>'>管理者管理</a></p>
-				<p id="content">管理者の追加・変更、管理者権限レベルマスタの追加・変更・出力、管理者ログイン情報の閲覧・出力など</p>
-			</div>
-			</s:if>
-			<s:if test="#session.login_Manager_permission_level >= 3" >
-			<div>
-				<p id="text-link"><a href='<s:url action="DataManagement"/>'>データ管理</a></p>
-				<p id="content">各データの分析・出力(商品マスタ,販売・損益実績,ユーザー情報,管理者情報など)
-			</div>
-			</s:if>
+			<table border="1">
+				<tr>
+					<th>操作内容</th>
+					<th>権限レベル</th>
+				</tr>
+				<s:iterator value="permissionList">
+					<tr>
+						<td><s:property value="accessTarget"/></td>
+						<td><s:property value="level"/></td>
+					</tr>
+				</s:iterator>
+			</table>
 		</div>
 	</div>
-
 </body>
 </html>

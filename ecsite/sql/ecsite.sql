@@ -73,4 +73,4 @@ INSERT INTO
 
 INSERT INTO
 	permission_level
-	VALUES("商品管理",1),("ユーザー管理",2),("管理者管理",5),("データ管理",3);
+	VALUES("ItemManagement",1),("UserManagement",2),("ManagerManagement",5),("DataManagement",3);
