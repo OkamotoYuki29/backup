@@ -12,13 +12,13 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup\WebProj5"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup\WebProj4"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup\WebProj3"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup\WebProj2"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup\WebProj"/>
 			<item value="C:\Users\internousdev\Desktop\WebProj"/>
-			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-okamoto\backup\Enshuu"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
