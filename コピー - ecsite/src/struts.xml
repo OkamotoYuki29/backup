@@ -131,21 +131,21 @@
 			</action>
 
 		<!-- ProductSupply -->
-			<action name="ProductSupply"
+			<action name="ProductSupplyAction"
 					class="com.internousdev.ecsite.action.ProductSupplyAction"
 					method="execute">
 
-				<result name="success">itemManagement.jsp</result>
+				<result name="success">productSupply.jsp</result>
 				<result name="error">errorPermission.jsp</result>
 
 			</action>
 
-		<!-- UserManagement -->
-			<action name="UserManagement"
-					class="com.internousdev.ecsite.action.UserManagementAction"
+		<!-- SalesInfoAction -->
+			<action name="SalesInfoAction"
+					class="com.internousdev.ecsite.action.SalesInfoAction"
 					method="execute">
 
-				<result name="success">userManagement.jsp</result>
+				<result name="success">salesInfo.jsp</result>
 				<result name="error">errorPermission.jsp</result>
 
 			</action>

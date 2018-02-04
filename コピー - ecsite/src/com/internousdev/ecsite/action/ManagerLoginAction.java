@@ -30,7 +30,7 @@ public class ManagerLoginAction extends ActionSupport implements SessionAware{
 
 			session.put("login_Manager_id",managerLoginDTO.getLoginManagerId());
 			session.put("login_Manager_name",managerLoginDTO.getManagername());
-			session.put("login_Manager_permission_level",managerLoginDTO.getPermissionLevel());
+			session.put("login_manager_level",managerLoginDTO.getPermissionLevel());
 
 			//管理権限レベルを取得
 			permissionList = permissionDAO.getPermissionLevel();

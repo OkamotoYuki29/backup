@@ -84,6 +84,12 @@
 			</s:if>
 			<s:if test="#session.login_manager_level >= 2" >
 			<div>
+				<p id="text-link"><a href='<s:url action="SalesInfoAction"/>'>売上・損益管理</a></p>
+				<p id="content">売上と損益の分析</p>
+			</div>
+			</s:if>
+			<s:if test="#session.login_manager_level >= 2" >
+			<div>
 				<p id="text-link"><a href='<s:url action="ManagerManagement"/>'>データ出力</a></p>
 				<p id="content">各種データの出力</p>
 			</div>

@@ -20,10 +20,21 @@ drop table if exists item_info_transaction;
 
 create table item_info_transaction(
 	id int null primary key auto_increment,
-	item_name varchar(30),
-	item_price int,
-	item_stock int,
-	insert_date datetime,
+	product_id int	not null unique,
+	product_name varchar(100) not null unique,
+	product_name_kana varchar(100) not null unique,
+	product_description varchar(255) not null,
+	category_id int,
+	buy_price int,
+	zaiko double,
+	genka double,
+	total_genka double,
+	image_file_path varchar(100),
+	image_file_name varchar(50),
+	release_date datetime not null,
+	release_company varchar(50),
+	status tinyint not null,
+	rexist_date datetime not null,
 	update_date datetime
 );
 
@@ -31,13 +42,27 @@ drop table if exists user_buy_item_transaction;
 
 create table user_buy_item_transaction(
 	id int not null primary key auto_increment,
-	item_transaction_id int,
-	total_price int,
-	total_count int,
-	user_master_id varchar(16),
-	pay varchar(30),
-	insert_date datetime,
-	delete_date datetime
+	user_id varchar(16) not null,
+	product_id int not null,
+	product_name varchar(100) not null,
+	product_count int not null,
+	buy_total_price int not null,
+	genka_total_price double not null,
+	rieki double not null,
+	regist_date datetime not null DEFAULT CURRENT_TIMESTAMP,
+	update_date datetime not null DEFAULT CURRENT_TIMESTAMP,
+	delete_date datetime not null DEFAULT CURRENT_TIMESTAMP
+);
+
+drop table if exists supply_history;
+create table supply_history(
+	id int not null primary key auto_increment,
+	supplies_date datetime not null,
+	product_id int,
+	product_name varchar(100) not null,
+	supplies_count int not null,
+	supplies_unit_price double not null,
+	supplies_total_price double not null
 );
 
 drop table if exists login_manager_transaction;
@@ -60,17 +85,7 @@ create table permission_level(
 );
 
 INSERT INTO
-	item_info_transaction(item_name,item_price,item_stock)
-	VALUES("ノートBook",100,50);
-
-INSERT INTO
 	login_user_transaction(login_id,login_pass,user_name)
 	VALUES("internous","internous01","test");
 
-INSERT INTO
-	login_manager_transaction(login_id,login_pass,manager_name,permission_level)
-	VALUES("internousdev","internousdev","インターノウス株式会社",5);
 
-INSERT INTO
-	permission_level
-	VALUES("ItemManagement",1),("UserManagement",2),("ManagerManagement",5),("DataManagement",3);
