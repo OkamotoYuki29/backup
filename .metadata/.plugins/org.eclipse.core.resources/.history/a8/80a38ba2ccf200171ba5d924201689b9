@@ -1,0 +1,9 @@
+package free;
+
+public class Main{
+	public static void main(String[] args) {
+		String str = "こんにちはJava";
+		char[] data1 = str.toCharArray();
+		for(char c : data1) {System.out.print(c);}
+	}
+}

@@ -1,0 +1,33 @@
+package com.internousdev.ecsite.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.SessionAware;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+import com.internousdev.ecsite.dao.SalesInfoDAO;
+import com.internousdev.ecsite.dto.SalesInfoDTO;
+
+public class SalesInfoAction extends ActionSupport implements SessionAware{
+	public Map<String,Object> session;
+
+	public String execute(){
+		String result = ERROR;
+		if((int)session.get("login_manager_level") >= 2){
+
+
+
+
+
+
+
+
+			result = SUCCESS;
+		}
+		return result;
+	}
+	@Override
+	public void setSession(Map<String,Object> session){
+		this.session = session;
+	}
+}

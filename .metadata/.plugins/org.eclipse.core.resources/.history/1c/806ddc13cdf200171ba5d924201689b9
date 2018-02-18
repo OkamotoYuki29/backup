@@ -1,0 +1,13 @@
+package free;
+
+import java.io.UnsupportedEncodingException;
+
+public class Main{
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		String str = "こんにちはJava";
+		char[] data1 = str.toCharArray();
+		for(char c : data1) {System.out.println(c);}
+		byte[] data2 = str.getBytes("utf-8");
+		System.out.println(data2[0]);
+	}
+}
